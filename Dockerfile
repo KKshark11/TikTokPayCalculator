@@ -1,19 +1,12 @@
-FROM nginx:alpine
+FROM node:18-alpine
 
-# Remove default config
-RUN rm /etc/nginx/conf.d/default.conf
+WORKDIR /app
 
-# Copy project files
-COPY . /usr/share/nginx/html
+COPY package.json ./
+RUN npm install
 
-# Create nginx config that uses Railway PORT
-RUN echo 'server { \
-    listen ${PORT}; \
-    root /usr/share/nginx/html; \
-    index index.html; \
-    location / { try_files $uri $uri/ /index.html; } \
-}' > /etc/nginx/conf.d/default.conf
+COPY . .
 
-EXPOSE 8080
+EXPOSE 3000
 
-CMD ["sh", "-c", "nginx -g 'daemon off;'"]
+CMD ["npm", "start"]
