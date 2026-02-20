@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TikTok Earnings Calculator (2026)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>TikTok Earnings Calculator</h1>
+        <p class="subtitle">
+            Realistic estimate based on country, engagement, watch time, video length & niche.
+        </p>
+
+        <div class="card glass">
+
+            <div class="input-group">
+                <label>Average Views Per Video</label>
+                <input type="number" id="views" placeholder="100000">
+                <small>Estimated average views on monetized videos.</small>
+            </div>
+
+            <div class="input-group">
+                <label>Engagement Rate (%)</label>
+                <input type="number" id="engagement" placeholder="6">
+                <small>Higher engagement generally increases RPM.</small>
+            </div>
+
+            <label>Video Length</label>
+            <div class="selector" id="lengthSelector">
+                <button class="select-btn active" data-value="short">Under 60s</button>
+                <button class="select-btn" data-value="medium">1–3 Minutes</button>
+                <button class="select-btn" data-value="long">3+ Minutes</button>
+            </div>
+
+            <label>Watch Time Quality</label>
+            <div class="selector" id="watchSelector">
+                <button class="select-btn active" data-value="low">Low</button>
+                <button class="select-btn" data-value="average">Average</button>
+                <button class="select-btn" data-value="high">High</button>
+                <button class="select-btn" data-value="excellent">Excellent</button>
+            </div>
+
+            <label>Main Audience Country</label>
+            <div class="selector" id="countrySelector">
+                <button class="select-btn active" data-value="usa">USA</button>
+                <button class="select-btn" data-value="uk">UK</button>
+                <button class="select-btn" data-value="canada">Canada</button>
+                <button class="select-btn" data-value="australia">Australia</button>
+                <button class="select-btn" data-value="other">Other</button>
+            </div>
+
+            <label>Content Type</label>
+            <div class="selector" id="nicheSelector">
+                <button class="select-btn active" data-value="finance">Finance</button>
+                <button class="select-btn" data-value="tech">Tech</button>
+                <button class="select-btn" data-value="education">Education</button>
+                <button class="select-btn" data-value="fitness">Fitness</button>
+                <button class="select-btn" data-value="gaming">Gaming</button>
+                <button class="select-btn" data-value="lifestyle">Lifestyle</button>
+            </div>
+
+            <button class="calculate-btn" onclick="calculate()">Calculate Earnings</button>
+
+        </div>
+
+        <div class="results card glass" id="results">
+
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <h3>Estimated RPM</h3>
+                    <p id="rpm">—</p>
+                </div>
+                <div class="stat-box highlight">
+                    <h3>Earnings Per Video</h3>
+                    <p id="earnings">—</p>
+                </div>
+            </div>
+
+            <canvas id="growthChart"></canvas>
+
+            <p id="breakdown" class="disclaimer"></p>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
