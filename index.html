@@ -7,21 +7,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO Meta -->
     <meta name="description"
         content="Realistic TikTok earnings calculator. Estimate how much TikTok pays per 1,000 views based on video length, watch time, engagement rate, country, and content type.">
-    <meta name="keywords"
-        content="TikTok earnings calculator, TikTok RPM, how much does TikTok pay, TikTok pay per 1000 views, TikTok creator rewards estimate">
+
     <meta name="author" content="TikTok Pay Calculator">
 
     <link rel="stylesheet" href="style.css">
-
-    <!-- Chart -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
     <link rel="icon" type="image/png" href="/favicon.png">
 
-    <!-- Analytics -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <script defer src="https://cloud.umami.is/script.js"
         data-website-id="d5b8a882-e9b2-4df5-9f77-911c5a49c5e3"></script>
 </head>
@@ -34,6 +29,8 @@
         <p class="subtitle">
             Realistic estimate based on country, engagement, watch time, video length & niche.
         </p>
+
+        <!-- Calculator Card -->
 
         <div class="card glass">
 
@@ -87,6 +84,8 @@
 
         </div>
 
+        <!-- Results -->
+
         <div class="results card glass" id="results">
 
             <div class="stats-grid">
@@ -101,52 +100,65 @@
             </div>
 
             <canvas id="growthChart"></canvas>
-
             <p id="breakdown" class="disclaimer"></p>
 
         </div>
 
-        <!-- SEO Content Section -->
+        <!-- Expanded SEO Content -->
 
         <div class="card glass">
 
             <h2>How Much Does TikTok Pay Per 1,000 Views?</h2>
 
             <p>
-                TikTok payouts vary depending on video length, watch time, audience location,
-                engagement rate, and program eligibility. Short-form videos under 60 seconds
-                typically earn between <strong>$0.02–$0.06 per 1,000 views</strong>
-                under older creator fund models.
+                TikTok payouts vary depending on video length, audience location, watch time,
+                engagement rate, and eligibility for monetization programs.
+                Under older Creator Fund models, short videos under 60 seconds
+                often earned between <strong>$0.02–$0.06 per 1,000 views</strong>.
             </p>
 
             <p>
-                Longer videos over one minute may qualify for the Creator Rewards Program,
-                where reported payouts in the United States range from
-                <strong>$0.30–$1.00 per 1,000 views</strong> depending on performance metrics.
+                Under the newer Creator Rewards Program, longer videos over one minute
+                in high-value countries such as the United States may earn between
+                <strong>$0.30–$1.00 per 1,000 views</strong> depending on retention and engagement.
             </p>
 
-            <h3>What Affects TikTok RPM?</h3>
+            <h2>How Much Does TikTok Pay For 10,000 Views?</h2>
+
+            <p>
+                With an average RPM of $0.50, a video reaching 10,000 views could generate
+                approximately <strong>$5</strong>. Lower engagement or shorter videos may earn less,
+                while strong retention and high advertiser demand may increase earnings.
+            </p>
+
+            <h2>How Much Does TikTok Pay For 1 Million Views?</h2>
+
+            <p>
+                At scale, earnings increase linearly. A creator earning $0.50 RPM
+                could generate around <strong>$500 per 1 million views</strong>.
+                Actual payouts vary based on performance metrics and monetization status.
+            </p>
+
+            <h2>What Affects TikTok RPM?</h2>
 
             <ul>
-                <li>Audience country (US views generally pay more)</li>
-                <li>Average watch time and retention</li>
-                <li>Video length eligibility</li>
-                <li>Engagement rate</li>
-                <li>Advertiser demand</li>
+                <li>Audience country (US and UK typically pay more)</li>
+                <li>Average watch time and retention rate</li>
+                <li>Video length eligibility (over 1 minute preferred)</li>
+                <li>Engagement rate (likes, shares, comments)</li>
+                <li>Advertiser demand in your niche</li>
             </ul>
 
-            <h3>Are These Earnings Guaranteed?</h3>
+            <h2>Frequently Asked Questions</h2>
 
-            <p>
-                No. All calculations provided by this website are estimates based on publicly
-                reported payout ranges. Actual earnings may vary depending on program
-                eligibility, policy updates, and advertiser demand.
-            </p>
+            <h3>Does TikTok pay for every view?</h3>
+            <p>No. Only eligible views under monetized programs generate revenue.</p>
 
-            <p>
-                This website is not affiliated with, endorsed by, or sponsored by TikTok.
-                TikTok is a trademark of its respective owner.
-            </p>
+            <h3>Are these earnings guaranteed?</h3>
+            <p>No. All calculations are estimates based on publicly reported payout ranges.</p>
+
+            <h3>Is this website affiliated with TikTok?</h3>
+            <p>No. This website provides independent earnings estimates and is not endorsed by TikTok.</p>
 
         </div>
 
@@ -161,6 +173,7 @@
     </div>
 
     <script src="script.js"></script>
+
 </body>
 
 </html>
